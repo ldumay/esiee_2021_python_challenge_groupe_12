@@ -1,5 +1,5 @@
-# ESIEE-IT - Python Challenge - Groupe - 12
-challenge - senario 3
+# ESIEE-IT - Python Challenge - [GOTY 😉]
+Challenge - senario 3
 [source du projet](http://univcergy.phpnet.org/scenario3/)
 
 <hr>
@@ -32,7 +32,7 @@ IDFRAMARTIN<<<<<<<<<<<<<<<<<<<095123
 2101095123451PIERRE<<<<<<<<8310198M9
 ```
 
-[Le MRZ](https://didierdevy.fr/InfoMRZ.aspx)
+Le code CNI est un [MRZ](https://didierdevy.fr/InfoMRZ.aspx).
 
 <hr>
 
@@ -92,3 +92,20 @@ réponse : 680 9963 43
 #### Secteur agroalimentaire
 - [autre source 1](https://t.co/67JhxXXqc9)
 - [autre source 2](https://t.co/gPSFY4wyZw)
+
+<hr>
+
+#### Réponse 1 => expert@atlantice.net
+
+Il va falloir la créer et faire un programme qui calcule la clef qui ouvrira la puce de la CNI
+Je peux vous aider mais je veux etre payer d'avance, je finance mon travail grace à du contenu il me faudra donc une vidéo dans laquelle vous jouerez que vous tournerez via une appli téléphone postée sur Youtube et dont vous me donnerez l'URL. Si cette vidéo ne me fait pas rire, vous n'aurez rien. Si elle me fait rire, je vous fournirais toutes les informations nécessaires à la création de votre CNI
+
+#### Réponse 2 => banque@atlantice.net
+Pour une ouverture de compte, merci de nous transmettre votre CNI et un conseiller reprendra contact avec vous pour l'ouverture
+
+<hr>
+
+####
+
+- Photo : [Photo](https://i.ytimg.com/vi/fvtQYsckLxk/maxresdefault.jpg)
+- Vidéo : [Vidéo](https://youtu.be/wFGb_3jqFE8)
