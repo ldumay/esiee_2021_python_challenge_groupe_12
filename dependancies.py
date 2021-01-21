@@ -28,3 +28,18 @@ def checkMonth(month): #month type 'int'
     elif month == 12: month = '12'
     else : month = '00'
     return month #month type 'str'
+
+def generatorKeyDigitMRZ(value): #value type str
+    facteurKeys = (7, 3, 1)
+    keyGenerated = (value)
+    resultat2 = 0
+    for (position, car) in enumerate(keyGenerated):
+        if car == "<":
+            valeur = 0
+        elif "0" <= car <= "9":
+            valeur = int(car)
+        elif "A" <= car <= "Z":
+            valeur = ord(car) - 55
+        resultat2 += valeur * facteurKeys[position % 3]
+    keyGenerated = str(resultat2 % 10)
+    return keyGenerated
