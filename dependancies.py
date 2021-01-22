@@ -81,3 +81,11 @@ def readWebPage(url, debugg): #value url type str
     # htmlResponseLenght = htmlResponse.length #poids en byte - ou [ len(htmlResponse) ]
     # htmlResponsePeek = htmlResponse.peek() #--
     # htmlResponseDecode = htmlResponse.decode("UTF-8")
+
+def testSimilarite(chaineRecherchee, chaineTestee):
+    chaineRecherchee = str(chaineRecherchee)
+    chaineTestee = str(chaineTestee)
+    if chaineRecherchee in chaineTestee :
+        return True
+    else:
+        return False

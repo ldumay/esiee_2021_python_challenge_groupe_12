@@ -23,4 +23,4 @@ concatenation de de leurs dates de naissances=811193524111958)
 ```
 - Découverte [source](http://univcergy.phpnet.org/scenario3/811193524111958/)
 
-- Découverte [source](http://univcergy.phpnet.org/scenario3/cryptomonnaie/index.php?err)
+- Découverte [source](http://univcergy.phpnet.org/scenario3/cryptomonnaie/)

@@ -41,6 +41,18 @@ def testerPage(url,mode):
         #    datas.append(x)
         #    x = x+1
 
+        # --Test Similarité
+        posibilitie = []
+        chaineRecherchee = [81, 11, 93, 52, 41, 19, 58]  # source => ../811193524111958
+        datas = codeTest()
+        for chaine in chaineRecherchee:
+            for data in datas:
+                test = testSimilarite(chaine, data)
+                if test == True:
+                    posibilitie.append(data)
+        print("totale : " + str(len(posibilitie)))
+        datas = posibilitie
+
         # --
         totalTests = len(datas)
         print("nb de tests " + str(totalTests))
@@ -50,8 +62,9 @@ def testerPage(url,mode):
             goodSource = testerPageCore(data)
             m = m+1
             print("test "+str(m))
+
         #--
-        if goodSource!="aucune":
+        if goodSource!="rien":
             resultat = "\nUrl : "+goodSource[0]+"\nContent : "+goodSource[1]
         else:
             resultat = goodSource

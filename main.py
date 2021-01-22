@@ -1,6 +1,7 @@
 # Git Version : 0.0.3
 
 # imports :
+from datas import *
 from testerPage import *
 from generateCNI import *
 
@@ -13,5 +14,5 @@ if __name__ == '__main__':
     #--Ouvrir une page web
     #openWebPage("https://ldumay.fr", 3, None)
 
-    #--TesterPage
+    #--Tester des Page web
     testerPage("",True)
