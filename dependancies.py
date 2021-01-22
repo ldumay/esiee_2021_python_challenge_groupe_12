@@ -1,5 +1,8 @@
 import sys
 import random
+import urllib
+import urllib.request
+import webbrowser
 
 def stopProgram() :
     print('Il y a une erreur dans votre saisie, veuillez réessayé svp.')
@@ -43,3 +46,38 @@ def generatorKeyDigitMRZ(value): #value type str
         resultat2 += valeur * facteurKeys[position % 3]
     keyGenerated = str(resultat2 % 10)
     return keyGenerated
+
+def openWebPage(url, browser, custom): #value url type str / value browser type int
+    # Custom
+    if browser == 0 and custom!=None : browser = custom + " %s"
+    #Internet Explorer
+    elif browser==1 and custom==None : browser = "C:\Program Files\Internet Explorer\iexplore.exe %s"
+    # Microsoft Edge
+    elif browser == 2 and custom==None : browser = "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe %s"
+    #Chrome
+    elif browser==3 and custom==None : browser = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
+    #--
+    webbrowser.get(browser).open_new(url)
+
+def readWebPage(url, debugg): #value url type str
+
+    if debugg==True :
+        page = urllib.request.urlopen(url)
+        htmlPageUrl = page.url
+        htmlPageStatus = page.status
+        htmlPage = page.read()
+        htmlResponse = [ htmlPageUrl, htmlPageStatus , htmlPage]
+        page.close()
+        return htmlResponse
+    else :
+        page = urllib.request.urlopen(url)
+        htmlResponse = page.read()
+        page.close()
+        return htmlResponse
+
+    # -- More
+    # htmlResponseType = type(htmlResponse) #type de la requete
+    # htmlResponseCode = htmlResponse.code #Code error
+    # htmlResponseLenght = htmlResponse.length #poids en byte - ou [ len(htmlResponse) ]
+    # htmlResponsePeek = htmlResponse.peek() #--
+    # htmlResponseDecode = htmlResponse.decode("UTF-8")

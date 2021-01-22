@@ -15,3 +15,21 @@ Pour :
 IDFRADUPONT<<<<<<<<<<<<<<<<<<<095123
 2101095123451JEAN<<<<<<<<<<8310198M5
 ```
+
+## Demo de CNI
+
+![demoCNI](ressources/PIERRE_DUPONT.jpg)
+
+Réponse de la banque :
+```
+Mr DUPONT
+
+Votre compte est désormais ouvert et accessible en ligne
+votre identifiant est votre numero de compte 21017567281
+et votre mot de passe temporaire: challengepython
+
+Cordialement
+la Banque RDP
+```
+
+Banque => [Compte](http://univcergy.phpnet.org/scenario3/banque/)
