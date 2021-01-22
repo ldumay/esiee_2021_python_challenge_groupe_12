@@ -17,9 +17,11 @@ VDQFH V
 ```
 Message
 ```
-suite a la decouverte du Gif = decryptage avec code césar 
-(3 =largent est stock dans un depot qui se trouve a l'url 
-concatenation de de leurs dates de naissances=811193524111958)
+LARGE NTEST STOCK DANSU NDEPO TQUIS ETROU VEALU RLCON CATEN ATION DEDEL EURSD ATESD ENAIS SANCE S
+```
+Soit : largent est stock dans un depot qui se trouve a l'url concatenation de de leurs dates de naissances
+```
+811193524111958
 ```
 - Découverte [source](http://univcergy.phpnet.org/scenario3/811193524111958/)
 

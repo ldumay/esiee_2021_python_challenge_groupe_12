@@ -8,7 +8,7 @@ def testerPageCore(data):
     code = code.replace(']', '')
     # --
     url = "http://univcergy.phpnet.org/scenario3/811193524111958/index.php?open=" + code + "&action=Donne+moi+la+solution"
-    #print("url : " + url)
+    print("url : " + url)
     # --
     htmlPage = readWebPage(url,True)
     resultat = str(htmlPage)
@@ -22,18 +22,15 @@ def testerPageCore(data):
             goodSource = [ htmlUrl, code ]
             #print("- OK - message caché trouvé, pour le code : " + code)
             #print(htmlContent)
-        #else:
-        #    print("- NO - message caché non trouvé")
-        #    #print(htmlContent)
+        else:
+            print("- NO - message caché non trouvé")
+            #print(htmlContent)
     else:
         print("- page error : "+htmlError)
     return goodSource
 
 def testerPage(url,mode):
     if url=="" and mode==True:
-        datas = codeTest()
-        #datas = [0]
-
         # --
         #x = 0
         #datas = []
@@ -50,8 +47,10 @@ def testerPage(url,mode):
                 test = testSimilarite(chaine, data)
                 if test == True:
                     posibilitie.append(data)
-        print("totale : " + str(len(posibilitie)))
-        datas = posibilitie
+        #datas = posibilitie
+        datas = codeTest()
+        # datas = [0]
+        print("totale : " + str(len(datas)))
 
         # --
         totalTests = len(datas)
@@ -61,7 +60,7 @@ def testerPage(url,mode):
         for data in datas:
             goodSource = testerPageCore(data)
             m = m+1
-            print("test "+str(m))
+            print("test "+str(m-1))
 
         #--
         if goodSource!="rien":

@@ -4,6 +4,35 @@ import urllib
 import urllib.request
 import webbrowser
 
+def desChiffresEtDesLettres(value):
+    alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T","U", "V", "W", "X", "Y", "Z"]
+    # --
+    chiffres = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    # --
+    voyelles = ["A","E","I","O","U","Y"]
+    # --
+    consonnes = []
+    x = 0
+    y = 0
+    while x < len(alphabet):
+        if voyelles[y] != alphabet[x] :
+            consonnes.append(alphabet[x])
+            y = y + 1
+        if y >= len(voyelles):
+            y = 0
+        x = x+1
+    # --
+    ponctuation = [".",",",";",":","/","\\","!","?","(",")","[","]","\"","\'","-","_"]
+    #--
+    if value==0: value = [alphabet,chiffres,voyelles,consonnes,ponctuation]
+    elif value==1: value = alphabet
+    elif value==2: value = chiffres
+    elif value==3: value = voyelles
+    elif value==4: value = consonnes
+    elif value==5:value = ponctuation
+    #--
+    return value
+
 def stopProgram() :
     print('Il y a une erreur dans votre saisie, veuillez réessayé svp.')
     sys.exit()
@@ -17,18 +46,18 @@ def randomNumber(lenght) : #lenght type 'int'
     return randomResult #randomResult type 'str'
 
 def checkMonth(month): #month type 'int'
-    if month == 1: month = '01'
-    elif month == 2: month = '02'
-    elif month == 3: month = '03'
-    elif month == 4: month = '04'
-    elif month == 5: month = '05'
-    elif month == 6: month = '06'
-    elif month == 7: month = '07'
-    elif month == 8: month = '08'
-    elif month == 9: month = '09'
-    elif month == 10: month = '10'
-    elif month == 11: month = '11'
-    elif month == 12: month = '12'
+    if month==1: month = '01'
+    elif month==2: month = '02'
+    elif month==3: month = '03'
+    elif month==4: month = '04'
+    elif month==5: month = '05'
+    elif month==6: month = '06'
+    elif month==7: month = '07'
+    elif month==8: month = '08'
+    elif month==9: month = '09'
+    elif month==10: month = '10'
+    elif month==11: month = '11'
+    elif month==12: month = '12'
     else : month = '00'
     return month #month type 'str'
 
@@ -37,11 +66,11 @@ def generatorKeyDigitMRZ(value): #value type str
     keyGenerated = (value)
     resultat2 = 0
     for (position, car) in enumerate(keyGenerated):
-        if car == "<":
+        if car=="<":
             valeur = 0
-        elif "0" <= car <= "9":
+        elif "0"<= car<= "9":
             valeur = int(car)
-        elif "A" <= car <= "Z":
+        elif "A"<= car<= "Z":
             valeur = ord(car) - 55
         resultat2 += valeur * facteurKeys[position % 3]
     keyGenerated = str(resultat2 % 10)
@@ -49,11 +78,11 @@ def generatorKeyDigitMRZ(value): #value type str
 
 def openWebPage(url, browser, custom): #value url type str / value browser type int
     # Custom
-    if browser == 0 and custom!=None : browser = custom + " %s"
+    if browser==0 and custom!=None : browser = custom + " %s"
     #Internet Explorer
     elif browser==1 and custom==None : browser = "C:\Program Files\Internet Explorer\iexplore.exe %s"
     # Microsoft Edge
-    elif browser == 2 and custom==None : browser = "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe %s"
+    elif browser==2 and custom==None : browser = "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe %s"
     #Chrome
     elif browser==3 and custom==None : browser = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
     #--
