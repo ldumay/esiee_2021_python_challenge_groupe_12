@@ -25,4 +25,8 @@ Soit : largent est stock dans un depot qui se trouve a l'url concatenation de de
 ```
 - Découverte [source](http://univcergy.phpnet.org/scenario3/811193524111958/)
 
+==> Réponse : 861 - (comment ???)
+
 - Découverte [source](http://univcergy.phpnet.org/scenario3/cryptomonnaie/)
+
+==> Réponse : 49.042966568052414,2.0825376270911464
